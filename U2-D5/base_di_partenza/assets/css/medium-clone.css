@@ -15,31 +15,39 @@
 #green {
   background-color: #1a8917;
 }
-nav {
+body {
+  min-width: 400px;
+}
+
+header nav {
   position: fixed;
   top: 0px;
   left: 0px;
   width: 100%;
   z-index: 15;
   background-color: #ffc017;
+  border-bottom: 2px solid black;
 }
 header {
   font-family: 'Roboto', sans-serif;
   background-color: #ffc017;
 }
-nav,
+header nav,
 header ul {
   display: flex;
   list-style: none;
   justify-content: space-between;
   align-items: center;
 }
-header ul .pop {
+header ul .pop,
+.all-M {
   display: none;
 }
 header ul li {
+  display: flex;
+  justify-content: center;
   margin-right: 1.2rem;
-  width: 50px;
+  width: auto;
 }
 header ul,
 nav svg {
@@ -63,8 +71,9 @@ header section {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 3em;
+  margin-top: 4.5em;
   padding: 1.5rem;
+  padding-top: 3rem;
 }
 header h1 {
   font-family: 'Spectral', serif;
@@ -146,6 +155,7 @@ main {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  color: grey;
   opacity: 0.6;
   font-size: 0.8rem;
 }
@@ -164,15 +174,200 @@ main article {
   width: 100%;
 }
 article h2 {
-  font-weight: bold;
-  font-size: 0.8rem;
+  font-weight: bolder;
+  font-size: 1rem;
   margin: 0.8rem 0;
 }
 .discover-container li {
   margin: 0.5rem 0.3rem 0 0;
   font-size: 0.8rem;
-  border: 1px solid grey;
+  border: 1px solid #eceded;
   padding: 0.5rem;
-  opacity: 0.7;
-  font-weight: 500;
+  color: grey;
+  opacity: 0.6;
+  font-weight: 700;
+}
+
+/* footer nav and comment */
+footer {
+  font-family: 'Roboto', sans-serif;
+}
+footer nav {
+  padding: 0.8rem 0 0.5rem 1rem;
+}
+footer ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+}
+footer li {
+  font-size: 0.9em;
+  margin-right: 0.9rem;
+  margin-bottom: 0.8rem;
+  color: grey;
+  opacity: 0.6;
+  font-weight: 700;
+}
+
+/* aritcle dei commenti */
+footer article {
+  display: flex;
+  padding: 0 1rem;
+  justify-content: space-between;
+  margin: 0.5rem 0 4rem 0;
+}
+
+.text-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.img img {
+  width: 230px;
+  height: 90%;
+}
+
+.info,
+.name-cont {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.name-cont img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 0.6rem;
+}
+.name-cont h3 {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.bold {
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+.text-cont p {
+  font-size: 0.9rem;
+  padding-right: 01.3em;
+  color: grey;
+  opacity: 0.6;
+  font-weight: 700;
+}
+.info p {
+  font-size: 0.7rem;
+
+  color: grey;
+  opacity: 0.6;
+  font-weight: 700;
+}
+.info-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.add {
+  margin-right: 1.5rem;
+}
+.special-p {
+  font-size: 0.7rem;
+  color: grey;
+  opacity: 0.6;
+  font-weight: 700;
+  margin-right: 0.8rem;
+  background-color: rgb(219, 219, 219);
+  opacity: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  height: 30px;
+  width: 80px;
+}
+
+/* Tablet media Q */
+@media screen and (min-width: 768px) {
+  header ul .pop,
+  .all-M {
+    display: block;
+  }
+  #m-cont {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    overflow: hidden;
+  }
+  .all-M iframe {
+    position: absolute;
+    top: 70px;
+    right: 0px;
+  }
+  .comment-container {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 2rem 0;
+  }
+  .comment {
+    width: 35%;
+    margin-left: 2rem;
+  }
+  .comment-container svg {
+    margin-left: 2rem;
+  }
+  .date {
+    width: 100%;
+  }
+  main article {
+    padding: 2rem 10rem 3rem 2rem;
+  }
+  footer {
+    padding: 1rem 2rem 0.5rem 3rem;
+  }
+  footer article:nth-last-of-type(1) {
+    margin-bottom: 2rem;
+  }
+}
+
+/* desktop */
+@media screen and (min-width: 1200px) {
+  main,
+  footer {
+    padding: 4.5rem;
+  }
+  header nav {
+    padding: 0 6rem;
+  }
+  .header-button {
+    margin-right: 7rem;
+  }
+  #m-cont {
+    padding-left: 6rem;
+  }
+  #m-cont h1 {
+    font-size: 5.5rem;
+  }
+  #m-cont aside {
+    font-size: 1.5rem;
+  }
+  main hr:nth-last-of-type(1) {
+    display: none;
+  }
+  .comment-container {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 2rem 0;
+  }
+  .comment {
+    width: 25%;
+    margin-left: 2rem;
+  }
 }
