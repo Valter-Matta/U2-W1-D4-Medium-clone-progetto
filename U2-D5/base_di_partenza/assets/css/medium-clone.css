@@ -41,13 +41,13 @@ header article {
   justify-content: center;
   align-items: center;
 
-  width: 80%;
+  width: 100%;
   height: 100%;
   position: fixed;
   top: 0;
-  right: 10%;
+  right: 0;
   z-index: 20;
-  background-color: #b2b2b2;
+  background-color: rgb(208, 201, 201, 0.8);
 }
 #background {
   width: 100%;
@@ -62,8 +62,8 @@ header article {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 50%;
-  height: 70%;
+  width: 35%;
+  height: 55%;
   background-color: #eceded;
   padding: 7em;
   -webkit-box-shadow: 5px 5px 15px 5px #949494;
@@ -119,6 +119,10 @@ header ul li {
   justify-content: center;
   margin-right: 1.2rem;
   width: auto;
+}
+header ul li:hover,
+.header-button:hover {
+  transform: scale(1.2);
 }
 header ul,
 nav svg {

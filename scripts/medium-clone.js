@@ -17,7 +17,7 @@ window.addEventListener('scroll', () => {
 const sign = document.getElementById('sign')
 const write = document.getElementById('write')
 const article = document.getElementById('modal')
-const main = document.getElementsByTagName('main')[0]
+const exit = document.getElementById('background')
 
 sign.addEventListener('click', () => {
   article.classList.toggle('open')
@@ -33,11 +33,6 @@ write.addEventListener('click', () => {
 })
 // article.classList.add('open')
 
-main.addEventListener('click', () => {
+exit.addEventListener('click', () => {
   article.classList.toggle('open')
-  if (article.classList === 'close') {
-    body.style.opacity = '1'
-  } else {
-    body.style.opacity = '0.5'
-  }
 })
